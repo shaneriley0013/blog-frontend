@@ -30,12 +30,12 @@ export function Content() {
 
 
   return (
-    <div>
+    <div className="container">
       <PostsNew />
       <br />
       <br />
       <br />
-      <button onClick={handleIndexPosts}>Get data</button>
+      {/* <button onClick={handleIndexPosts}>Get data</button> */}
       <PostsIndex posts={posts} onShowPost={handleShowPost} />
       <Modal show={isPostsShowVisible} onClose={handleClose}>
       <PostsShow post={currentPost}/>
