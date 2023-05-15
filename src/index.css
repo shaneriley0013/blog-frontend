@@ -1,4 +1,4 @@
-#posts-index img {
+img {
   width: 300px;
 }
 
@@ -10,4 +10,5 @@ html {
 
 #root {
   font-family: Futura;
+  background-image: url('/Users/admin/Desktop/Actualize/JAVA APPS/blog-frontend/src/assets/squidfingers.jpg');
 }
