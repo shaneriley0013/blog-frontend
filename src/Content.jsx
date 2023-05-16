@@ -5,6 +5,7 @@ import { PostsNew } from "./PostsNew";
 import { Modal } from "./Modal";
 import { PostsShow } from "./PostsShow";
 import { Signup } from "./Signup";
+import { Login } from "./Login";
 
 
 
@@ -37,13 +38,13 @@ export function Content() {
 
   return (
     <div className="container">
+      <Login />
       <Signup />
       <PostsNew />
       <br />
       <br />
       <br />
-      {/* <button onClick={handleIndexPosts}>Get data</button> */}
-      <PostsIndex posts={posts} onShowPost={handleShowPost} />
+            <PostsIndex posts={posts} onShowPost={handleShowPost} />
       <Modal show={isPostsShowVisible} onClose={handleClose}>
       <PostsShow post={currentPost}/>
       </Modal>
