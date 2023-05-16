@@ -6,6 +6,7 @@ import { Modal } from "./Modal";
 import { PostsShow } from "./PostsShow";
 import { Signup } from "./Signup";
 import { Login } from "./Login";
+import { LogoutLink } from "./LogoutLink";
 
 
 
@@ -39,6 +40,7 @@ export function Content() {
   return (
     <div className="container">
       <Login />
+      <LogoutLink />
       <Signup />
       <PostsNew />
       <br />
