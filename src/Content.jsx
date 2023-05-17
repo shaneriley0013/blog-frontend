@@ -37,6 +37,7 @@ export function Content() {
   }
 
   const handleCreatePost = (params) => {
+    console.log(params)
     axios.post('http://localhost:3000/posts.json',params).then(response => {
       console.log(response.data);
       setPosts([...posts, response.data])
@@ -62,6 +63,14 @@ export function Content() {
     })
   }
 
+  const handleDestroyPost = (postId) => {
+    console.log('hanlding destroy recipe')
+    axios.delete(`http://localhost:3000/posts/${postId}.json`).then(response => {
+      console.log(response.data);
+      setPosts(posts.filter(post => post.id != postId))
+    })
+  }
+
 
   return (
     <div className="container">
@@ -74,7 +83,7 @@ export function Content() {
       <br />
       <PostsIndex posts={posts} onShowPost={handleShowPost} />
       <Modal show={isPostsShowVisible} onClose={handleClose}>
-        <PostsShow post={currentPost} onUpdatePost={handleUpdatePost}/>
+        <PostsShow post={currentPost} onUpdatePost={handleUpdatePost} onDestroyPost={handleDestroyPost}/>
       </Modal>
     </div>
 
