@@ -3,12 +3,12 @@ import axios from "axios"
 
 export function PostsShow(props) {
   const handleSubmit = (event) => {
-    console.log("testing")
+    console.log("testing");
     event.preventDefualt();
-    // const params = new FormData(event.target);
-    // axios.patch(`http://localhost:3000/posts/${props.post.id}.json`, params).then(response => {
-    //   console.log(response.data);
-    // })
+    const params = new FormData(event.target);
+    axios.patch(`http://localhost:3000/posts/${props.post.id}.json`, params).then(response => {
+      console.log(response.data);
+    })
   }
   return (
     <div>
